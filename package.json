@@ -1,6 +1,18 @@
 {
+	"name": "crimlog-contracts",
+	"version": "0.0.1",
+	"description": "",
+	"private": true,
+	"engines": {
+		"node": ">=16.18.0",
+		"pnpm": ">=7.0.0"
+	},
 	"scripts": {
-		"deploy": "pnpm hardhat run scripts/deploy.ts --network matic"
+		"deploy": "pnpm hardhat run scripts/deploy.ts --network matic",
+		"format": "yarn rome format .",
+		"format:fix": "yarn rome format . --write",
+		"lint": "yarn rome check .",
+		"lint:fix": "yarn rome check . --apply-suggested"
 	},
 	"devDependencies": {
 		"@ethersproject/abi": "^5.4.7",
@@ -21,6 +33,7 @@
 		"ethers": "^5.4.7",
 		"hardhat": "2.13.0",
 		"hardhat-gas-reporter": "^1.0.8",
+		"rome": "11.0.0",
 		"solidity-coverage": "^0.8.0",
 		"ts-node": ">=8.0.0",
 		"typechain": "^8.1.0",
