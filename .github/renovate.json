@@ -1,0 +1,21 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["elijaholmos/.github:renovate-config"],
+	"packageRules": [
+		{
+			"matchPackagePatterns": ["nomic"],
+			"matchUpdateTypes": ["minor", "patch"],
+			"groupName": "Nomic dependencies"
+		},
+		{
+			"matchPackagePatterns": ["ethers"],
+			"matchUpdateTypes": ["minor", "patch"],
+			"groupName": "Ethers dependencies"
+		},
+		{
+			"matchPackagePatterns": ["typechain"],
+			"matchUpdateTypes": ["minor", "patch"],
+			"groupName": "Typechain dependencies"
+		}
+	]
+}
